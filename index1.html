@@ -1,0 +1,694 @@
+﻿<html>
+<head>
+<title>19BCE1123 DA3 NEHA</title>
+<link rel="stylesheet" href="style1.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+<section id="nav-bar">
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#top">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#definitions">DEFINITIONS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#ddl">DDL COMMANDS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#constraints">CONSTRAINTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#dml">DML COMMANDS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="#contact">CONTACT US</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</section>
+<div id="slider">
+<div id="headerslider" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#headerslider" data-slide-to="0" class="active"></li>
+    <li data-target="#headerslider" data-slide-to="1"></li>
+    <li data-target="#headerslider" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="img/logo3.png">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/logo1.jpg">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="img/logo2.jpg">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#headerslider" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#headerslider" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+<section id="definitions">
+<div class="container">
+<h1>DEFINITIONS
+</h1>
+<div class="row">
+<div class="col-md-6 text-center">
+<h3>
+WHAT IS DDL
+</h3>
+<p>DDL(Data Definition language):DDL consists of the SQL commands that can be used to define the database schema.It simply deals with the descriptions of the database schema and is used to create and modify the structure of the database objects in the database.
+</p>
+</div>
+<div class="col-md-6 text-center">
+<h3>
+WHAT IS DML
+</h3>
+<p>DML(Data Manipulation language):The SQL commands that deals with the mainpulation of the data present in the database belong to the DML and this includes most of the SQL statements.
+</p>
+</div>
+</section>
+<section id="ddl">
+<div class="container">
+<h1>DDL COMMANDS</h1>
+<div class="row">
+<h3>
+Examples of DDL commands:
+</h3>
+<p>
+CREATE – is used to create the database or its objects (like table, index, function, views, store procedure and triggers).
+</p>
+<p>
+DROP – is used to delete objects from the database.
+</p>
+<p>
+ALTER-is used to alter the structure of the database.
+</p>
+<p>
+TRUNCATE–is used to remove all records from a table, including all spaces allocated for the records are removed.
+</p>
+<p>
+COMMENT –is used to add comments to the data dictionary.
+</p>
+<p>
+RENAME –is used to rename an object existing in the database.
+</p>
+</section>
+</section>
+<section id="ddl">
+<div class="container">
+<h1>DDL COMMANDS</h1>
+<div class="row">
+<pre>
+<h3>
+CREATE:
+</h3>
+<p>
+Syntax:
+CREATE TABLE table_name (
+column1 datatype,
+column2 datatype,
+column3 datatype,
+....
+);
+
+Example
+The following example creates a table called "Persons" that contains five columns: PersonID, LastName, FirstName, Address, and City:
+
+CREATE TABLE Persons (
+PersonID int,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+);
+<h3>
+DROP
+</h3>
+Syntax
+DROP TABLE table_name;
+<h5>
+Example
+</h5>
+The following SQL statement drops the existing table "Shippers":
+
+DROP TABLE Shippers;
+
+<h3>
+ALTER
+</h3>
+The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+The ALTER TABLE statement is also used to add and drop various constraints on an existing table.
+ALTER TABLE-ADD Column:
+ALTER TABLE table_name
+ADD column_name datatype;
+<h5>
+Example
+</h5>
+The following SQL adds an "Email" column to the "Customers" table:
+ALTER TABLE Customers ADD Email varchar(255);
+
+ALTER TABLE-DROP COLUMN
+ALTER TABLE table_name DROP COLUMN column_name;
+<h5>
+Example
+</h5>
+The following SQL deletes the "Email" column from the "Customers" table:
+ALTER TABLE Customers DROP COLUMN Email;
+
+ALTER TABLE -MODIFY COLUMN
+
+To change the data type of a column in a table, use the following syntax:
+ALTER TABLE table_name MODIFY COLUMN column_name datatype;
+<h5>
+Example
+</h5>
+The following Syntax changes the datatype of the Email to char:
+ALTER TABLE Customers MODIFY COLUMN Email char(30);
+<h3>
+TRUNCATE
+</h3>
+Used to remove all records from a table, including all spaces allocated for the records are removed.
+TRUNCATE TABLE table_name;
+<h5>
+Example
+</h5>
+The following SQL truncates the table "Categories":
+TRUNCATE TABLE Categories;
+<h3>
+RENAME
+</h3>
+RENAME Table
+
+ALTER TABLE table_name RENAME TO new_table_name;
+<h5>
+Example
+</h5>
+In this example, the table name cus_tbl is renamed as cus_table.
+ALTER TABLE cus_tbl RENAME TO cus_table;
+
+RENAME column in table
+
+ALTER TABLE table_name RENAME COLUMN old_col_name TO new_col_name;
+<h5>
+Example
+</h5>
+Here,the column Address is renamed as Addr in Persons Table.
+ALTER TABLE Persons RENAME COLUMN Address TO Addr;
+
+Describing structure of a table
+desc table_name
+</p>
+</pre>
+</div>
+</section>
+</section>
+<section id="constraints">
+<div class="container">
+<h1>CONSTRAINTS</h1>
+<div class="row">
+<pre>
+<p>
+<h5>NOT NULL Constraint:</h5> Ensures that a column cannot have NULL value.
+<h5>DEFAULT Constraint:</h5> Provides a default value for a column when none is specified.
+<h5>UNIQUE Constraint:</h5> Ensures that all values in a column are different.
+<h5>PRIMARY Key:</h5> Uniquely identified each rows/records in a database table.
+<h5>FOREIGN Key: </h5>Uniquely identified a rows/records in any another database table.
+<h5>CHECK Constraint: </h5>The CHECK constraint ensures that all values in a column satisfy certain conditions.
+<h5>INDEX Constraint:</h5> Use to create and retrieve data from the database very quickly.
+
+Let's create a table for our reference:
+CREATE TABLE Persons (
+PersonID int,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+);
+<h3>
+NOT NULL COSTRAINT
+</h3>
+By default, a column can hold NULL values.
+The NOT NULL constraint enforces a column to NOT accept NULL values.
+This enforces a field to always contain a value, which means that you cannot insert a new record, or update a record without adding a value to this field.
+SQL NOT NULL on CREATE TABLE
+
+The following SQL ensures that the "ID", "LastName", and "FirstName" columns will NOT accept NULL values when the "Persons" table is created:
+CREATE TABLE Persons (
+ID int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255) NOT NULL,
+Age int
+);
+<h5>
+Adding a Not Null constraint to existing table:
+</h5>
+ALTER TABLE table_name
+MODIFY column_name datatype NOT NULL;
+<h3>
+UNIQUE CONSTRAINT
+</h3>
+The UNIQUE constraint ensures that all values in a column are different.
+Both the UNIQUE and PRIMARY KEY constraints provide a guarantee for uniqueness for a column or set of columns.
+A PRIMARY KEY constraint automatically has a UNIQUE constraint.
+However, you can have many UNIQUE constraints per table, but only one PRIMARY KEY constraint per table.
+SQL UNIQUE Constraint on CREATE TABLE
+
+The following sql creates an unique constraint named myunique on name attribute of studs1 table:
+create table studs1(
+regno number(12),
+name varchar2(10),
+city varchar2(7),
+constraint myunique unique(name));
+<h5>
+Adding Unique constraint to existing table:
+</h5>
+ALTER TABLE table_name
+ADD CONSTRAINT MyUniqueConstraint UNIQUE(column1, column2...);
+<h5>
+Drop Unique constraint from the table:
+</h5>
+ALTER TABLE table_name
+DROP CONSTRAINT MyUniqueConstraint;
+<h5>
+DEFAULT CONSTRAINT
+</h5>
+SQL DEFAULT on CREATE TABLE
+
+The following SQL sets a DEFAULT value for the "City" column when the "Persons" table is created:
+CREATE TABLE Persons (
+ID int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Age int,
+City varchar(255) DEFAULT 'Sandnes'
+);
+
+SQL DEFAULT on ALTER TABLE
+
+To create a DEFAULT constraint on the "City" column when the table is already created, use the following SQL:
+ALTER TABLE Persons
+MODIFY City SET DEFAULT 'Sandnes';
+<h5>
+DROP a DEFAULT Constraint
+</h5>
+To drop a DEFAULT constraint, use the following SQL:
+ALTER TABLE Persons
+ALTER City DROP DEFAULT;
+<h3>
+CHECK Constraint
+</h3>
+The CHECK constraint is used to limit the value range that can be placed in a column.
+If you define a CHECK constraint on a single column it allows only certain values for this column.
+If you define a CHECK constraint on a table it can limit the values in certain columns based on values in other columns in the row.
+<h5>
+SQL CHECK on CREATE TABLE
+</h5>
+The following SQL creates a CHECK constraint on the "Age" column when the "Persons" table is created. The CHECK constraint ensures that the age of a person must be 18, or older:
+CREATE TABLE Persons (
+ID int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Age int,
+CHECK (Age>=18)
+);
+<h5>
+To allow naming of a CHECK constraint, and for defining a CHECK constraint on multiple columns, use the following SQL syntax:
+</h5>
+CREATE TABLE Persons (
+ID int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Age int,
+City varchar(255),
+CONSTRAINT CHK_Person CHECK (Age>=18 AND City='Sandnes')
+);
+<h5>
+SQL CHECK on ALTER TABLE
+</h5>
+To create a CHECK constraint on the "Age" column when the table is already created, use the following SQL:
+ALTER TABLE Persons
+ADD CHECK (Age>=18);
+<h5>
+DROP a CHECK Constraint
+</h5>
+To drop a CHECK constraint, use the following SQL:
+ALTER TABLE Persons
+DROP CHECK CHK_PersonAge;
+<h3>
+PRIMARY KEY Constraint
+</h3>
+Primary Key:
+Used to identify a record uniquely.
+It is applied to any attribute
+Value of a primary key should not be null and should not be repeated again in the domain.
+SQL PRIMARY KEY on CREATE TABLE
+
+The following SQL creates a primary key on attribute_name1:
+create table table_name(
+attribute_name1 data_type primary key,
+attribute_name2 data_type);
+
+        or
+create table table_name(
+attribute_name1 data_type,
+attribute_name2 data_type,
+primary key(attribute_name1));
+
+Example
+
+create table student(
+regno number(5) primary key,
+name varchar2(15),
+rollno number(8),
+dept varchar2(5),
+doj date);
+
+        or
+create table student(
+regno number(5),
+name varchar2(15),
+rollno number(8),
+dept varchar2(5),
+doj date,
+primary key(regno));
+<h5>
+SQL PRIMARY KEY on ALTER TABLE
+</h5>
+alter table table_name
+add constraint pk primary key(attribute_name);
+<h5>
+DROP a PRIMARY KEY Constraint
+</h5>
+alter table table_name
+drop primary key;
+FOREIGN KEY Constraint
+A FOREIGN KEY is a key used to link two tables together.
+A FOREIGN KEY is a field (or collection of fields) in one table that refers to the PRIMARY KEY in another table.
+The table containing the foreign key is called the child table, and the table containing the candidate key is called the referenced or parent table.
+<h5>
+SQL FOREIGN KEY on CREATE TABLE
+</h5>
+The following SQL creates a FOREIGN KEY on the "PersonID" column when the "Orders" table is created:
+CREATE TABLE Orders (
+OrderID int NOT NULL,
+OrderNumber int NOT NULL,
+PersonID int,
+PRIMARY KEY (OrderID),
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID),
+);
+
+To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, use the following SQL syntax:
+CREATE TABLE Orders (
+OrderID int NOT NULL,
+OrderNumber int NOT NULL,
+PersonID int,
+PRIMARY KEY (OrderID),
+CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID),
+REFERENCES Persons(PersonID)
+);
+<h5>
+SQL FOREIGN KEY on ALTER TABLE
+</h5>
+To create a FOREIGN KEY constraint on the "PersonID" column when the "Orders" table is already created, use the following SQL:
+ALTER TABLE Orders
+ADD FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+
+To allow naming of a FOREIGN KEY constraint, and for defining a FOREIGN KEY constraint on multiple columns, use the following SQL syntax:
+ALTER TABLE Orders
+ADD CONSTRAINT FK_PersonOrder
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID);
+<h5>
+DROP a FOREIGN KEY Constraint
+</h5>
+To drop a FOREIGN KEY constraint, use the following SQL:
+ALTER TABLE Orders
+DROP FOREIGN KEY FK_PersonOrder;
+<h3>
+CREATE INDEX
+</h3>
+The CREATE INDEX statement is used to create indexes in tables.
+Indexes are used to retrieve data from the database more quickly than otherwise. The users cannot see the indexes, they are just used to speed up searches/queries.
+CREATE INDEX Syntax
+
+Creates an index on a table. Duplicate values are allowed:
+CREATE INDEX index_name
+ON table_name (column1, column2, ...);
+
+CREATE UNIQUE INDEX Syntax
+Creates a unique index on a table. Duplicate values are not allowed:
+CREATE UNIQUE INDEX index_name
+ON table_name (column1, column2, ...);
+<h3>
+DROP INDEX Statement
+</h3>
+The DROP INDEX statement is used to delete an index in a table.
+ALTER TABLE table_name
+DROP INDEX index_name;
+
+Common syntax for adding a constraint to the existing table
+
+alter table table_name add constraint constraint_name constraint_type(attribute_name);
+
+Common systax for dropping a constraint from a table
+
+alter table table_name
+drop constraint constraint_name;
+</p>
+</pre>
+</section>
+<section id="dml">
+<div class="container">
+<h1>DML COMMANDS</h1>
+<div class="row">
+<pre>
+<p>
+Data Manipulation Language (DML) statements or commands are used for managing data within tables. Some commands of DML are:
+
+Some commands of DML are:
+<h3>
+SELECT</h3> – Selects tuple, domain values and various conditions can be applied during selection
+<h3>INSERT</h3> – Inserts values into the relation. Non values should be entered as Null.
+                Method 1 - Inserting Single records
+                Method 2 - Inserting Multiple records
+                Method 3 - Inserting Values for Specific attributes
+<h3>UPDATE</h3> – updates existing data within a table
+<h3>DELETE</h3> – Deletes the contents of the relation and conditions can be applied during deletion.
+
+
+Let's create a table for our refrence:
+create table player(
+name varchar2(20),
+country varchar2(15),
+matches number(3),
+runs number(4),
+jersy number(2)
+);
+<h3>
+INSERT COMMAND
+</h3>
+<h5>Method 1 - Inserting Single records
+</h5>
+INSERT INTO table_name (column, column1, column2, column3, ...)
+VALUES (value, value1, value2, value3 ...) ;
+
+Example
+insert into player
+values('sachin','india',98,999,9);
+<h5>
+Method 2 - Inserting Multiple records
+</h5>
+SQL> insert into player
+values('&name','&country',&matches,&runs,&jersy);
+Enter value for name: shewag
+Enter value for country: india
+Enter value for matches: 15
+Enter value for runs: 750
+Enter value for jersy: 5
+old 1: insert into player values('&name','&country',&matches,&runs,&jersy)
+new 1: insert into player values('shewag','india',15,750,5)
+1 row created.
+
+SQL> /
+Enter value for name: gilchrist
+Enter value for country: australia
+Enter value for matches: 50
+Enter value for runs: 5000
+Enter value for jersy: 3
+old 1: insert into player values('&name','&country',&matches,&runs,&jersy)
+new 1: insert into player values('gilchrist','australia',50,5000,3)
+  1 row created.
+<h5>
+Method 3 - Inserting Values for selected attributes
+</h5>
+insert into player(name,country,matches)
+values('pathani','india',02);
+<h3>
+SELECT COMMAND
+</h3>
+Selecting the overall contents (tuples) of the relation
+select * from table_name;
+<h5>
+Example
+</h5>
+select * from player;
+
+Selecting domain values
+SELECT attribute, ….., attribute n FROM table_name;
+<h5>
+Example
+</h5>
+select name,country from player; 
+
+Selecting values by avoiding repetitions and duplications
+select distinct country from player;
+
+Selecting tuple values based on conditions
+
+select * from player where matches>=40; 
+
+Selecting domain values based on conditions
+
+select name,runs from player where runs>=1000;
+
+Selecting tuple values based on sorting in ascending order
+
+select * from player order by matches;
+
+Selecting tuple values based on sorting in ascending order by specifying asc
+
+select * from player order by matches asc;
+
+Selecting tuple values based on sorting in descending order by specifying desc
+
+select * from player order by matches desc;
+
+Selecting tuple values based on sorting with both asc and desc
+
+Select * from player order by matches asc, country desc;
+
+Selecting tuple values by using string constants
+
+Selecting tuple values whose name starts with ‘s’
+
+select * from player where name like 's%';
+
+Selecting tuple values whose 5 character name starts with‘d’ and ends with ‘i’
+
+select * from player where name like 'd___i';
+
+Selecting tuple values whose name has character ‘c’
+
+select * from player where name like '%c%';
+<h3>
+UPDATE COMMAND
+</h3>
+<h5>Syntax
+</h5>
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;
+<h5>
+Example
+</h5>
+Change the runs as 10 whose jersy number is 10
+update player
+set runs=10
+where jersy=10;
+<h3>
+DELETE COMMAND
+</h3>
+Deleting based on conditions
+
+DELETE FROM table_name WHERE condition;
+<h5>
+Example
+</h5>
+delete from player where jersy is null;
+
+Deleting overall contents from the relation
+
+DELETE FROM table_name;
+<h5>
+Example
+</h5>
+delete from player;
+<h3>
+COPY A TABLE
+</h3>
+<h5>
+Syntax
+</h5>
+create table new_table_name as select * from table_name;
+<h5>
+Example
+</h5>
+create table player2 as select * from player;
+<pre>
+</p>
+<section id="contact">
+<div class="container">
+<h1>Get in touch</h1>
+<div class="row">
+<div class="col-md-6">
+<form class="contact form">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Your name">
+</div>
+<div class="form-group">
+<input type="number" class="form-control" placeholder="Phone number">
+</div>
+<div class="form-group">
+<input type="email" class="form-control" placeholder="Email id">
+</div>
+<div class="form-group">
+<textarea class="form-control"rows="4" placeholder="Message">
+</textarea>
+</div>
+<button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+</form>
+</div>
+<div class="col-md-6 contact-info">
+<div class="follow"<b></b><i class="fa fa-map-marker" aria-hidden="true"></i>Vellore Instituite of technology,
+Kelambakkam road-vandalur road,Chennai,Tamilnadu 600127.</div>
+<div class="follow"<b></b><i class="fa fa-phone" aria-hidden="true"></i>9014768288</div>
+<div class="follow"<b></b><i class="fa fa-envelope-o" aria-hidden="true"></i>nehabheemisetty@gmail.com</div>
+<div class="follow"><label><b>Get social:</b></label>
+<a href="#"><i class="fa fa-facebook"></i></a>
+<a href="#"><i class="fa fa-youtube"></i></a>
+<a href="#"><i class="fa fa-twitter"></i></a>
+<a href="#"><i class="fa fa-google-plus"></i></a>
+</div>
+</div>
+</div>
+<section id="footer">
+<div class="container text-center">"
+<p>
+Made with <i class="fa fa-heart"></i> by Neha Bheemisetty</p>
+</div>
+</section>
+<script src="path/to/smooth-scroll.js"></script>
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+</body>
+</html>
